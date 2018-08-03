@@ -10,7 +10,7 @@ use std::thread;
 use std::sync::{Arc, Mutex};
 use std::marker::PhantomData;
 use std::cmp::PartialEq;
-use std::cell::RefCell;
+use std::cell::{RefCell, RefMut};
 
 struct ItemModel {}
 
@@ -50,13 +50,9 @@ impl Apple {
     }
     /// 检查是否和 other 相遇
     /// 相遇后, 将状态置为 SCORE
-    fn encourage(&mut self, other: People) -> bool {
+    fn encourage(&mut self, other: RefMut<People>) -> bool {
         if (self.y + self.h >= other.y) && (self.y + self.h <= other.y + other.h) {
-            let is = (self.x + self.w >= other.x) && (self.x + self.w <= other.x + other.w);
-            if is {
-                self.status = AppleStatue::SCORE;
-            }
-            return is;
+            return (self.x + self.w >= other.x) && (self.x + self.w <= other.x + other.w);
         }
         false
     }
@@ -69,6 +65,10 @@ impl Apple {
         if (self.y > 720.0) && (self.status != AppleStatue::SCORE) {
             self.status = AppleStatue::DIE
         }
+    }
+
+    fn marker_score(&mut self) {
+        self.status = AppleStatue::SCORE;
     }
 }
 
@@ -168,6 +168,7 @@ struct People {
     w: f64,
     h: f64,
     speed: f64,
+    statue: AppleStatue,
 }
 
 impl People {
@@ -178,12 +179,16 @@ impl People {
             y,
             w: 25.0,
             h: 25.0,
-            speed: 10.0,
+            speed: 2.0,
+            statue: AppleStatue::LIVE,
         }
     }
     /// update position
     fn update(&mut self) {
-        self.y = self.y + self.speed;
+        self.x = self.x + self.speed;
+    }
+    fn maker_die(&mut self) {
+        self.statue = AppleStatue::DIE
     }
 }
 
@@ -195,11 +200,11 @@ struct Game {
     life: usize,
     lives: usize,
     /// 得分的苹果
-    scores: Vec<RefCell<Apple>>,
+    scores: usize,
     /// LIVE 的 苹果
     apples: Vec<RefCell<Apple>>,
     /// 路上的行人, 得分点
-    peoples: Arc<Mutex<Vec<People>>>,
+    peoples: Arc<Mutex<Vec<RefCell<People>>>>,
     shooter: Shooter,
 }
 
@@ -230,7 +235,7 @@ impl Game {
             scene: GameMode::START,
             lives,
             life: lives,
-            scores: vec![],
+            scores: 0,
             apples: vec![],
             peoples: Arc::new(Mutex::new(vec![])),
             shooter: Shooter::new(2, 2),
@@ -249,11 +254,34 @@ impl Game {
             let interval = Duration::from_secs(2);
             loop {
                 park_timeout(interval);
-                let p = People::new(30.0, 720.0);
+                let p = People::new(30.0, 650.0);
                 let mut pps = peoples.lock().unwrap();
-                pps.push(p);
+                pps.push(RefCell::new(p));
             }
         });
+
+    }
+    /// update scores apples peoples
+    /// here we got some data which showing on screen
+    fn update(&mut self) {
+        let ap: Vec<RefCell<Apple>> = self.apples.iter().filter(|a| {
+            let a = a.borrow_mut();
+            match a.status {
+                AppleStatue::SCORE => {
+                    self.scores += 20;
+                    return false;
+                }
+                AppleStatue::LIVE => {
+                    return true;
+                }
+                AppleStatue::DIE => {
+                    self.lives -= 1;
+                    return false;
+                }
+            }
+        })
+            .cloned()
+            .collect();
     }
 }
 
@@ -411,7 +439,6 @@ fn main() {
                                 c.transform,
                                 g,
                             );
-                            
                             // draw apples
                             game.apples.iter().for_each(|a| {
                                 let mut a = a.borrow_mut();
@@ -420,8 +447,41 @@ fn main() {
                                       , g);
                                 a.update();
                             });
+                            let peoples = game.peoples.lock().unwrap();
                             // draw people
+                            peoples.iter().for_each(|p| {
+                                let mut p = p.borrow_mut();
+                                rectangle(
+                                    [1.0, 0.0, 1.0, 1.0],
+                                    [p.x, p.y, p.w, p.h],
+                                    c.transform,
+                                    g,
+                                );
+                                p.update();
+                            });
+                            game.apples.iter().for_each(|a| {
+                                let mut a = a.borrow_mut();
+                                peoples.iter().for_each(|p| {
+                                    if a.encourage(p.borrow_mut()) {
+                                        a.marker_score();
+                                        p.borrow_mut().maker_die();
+                                    }
+                                });
+                            });
                         });
+
+                        game.apples.iter().for_each(|a| {
+                            let mut a = a.borrow_mut();
+                            let peoples = game.peoples.lock().unwrap();
+                            peoples.iter().for_each(|p| {
+                                if a.encourage(p.borrow_mut()) {
+                                    a.marker_score();
+                                    p.borrow_mut().maker_die();
+                                }
+                            });
+                        });
+
+                        game.update();
                     }
                     _ => {}
                 }

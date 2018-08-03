@@ -10,6 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f29a0e38-ba5c-4b46-910d-034b653866aa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -64,46 +65,66 @@
     <session id="-1142090779">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.19" value="2" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="md" value="1" />
-          <entry key="rs" value="14" />
+          <entry key="jpg" value="1" />
+          <entry key="md" value="3" />
+          <entry key="rs" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="Image" value="1" />
           <entry key="Markdown" value="1" />
-          <entry key="Rust" value="14" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="Rust" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="rs" value="12941" />
+          <entry key="rs" value="19806" />
+          <entry key="txt" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Rust" value="12941" />
+          <entry key="PLAIN_TEXT" value="19" />
+          <entry key="Rust" value="19806" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="412" column="29" selection-start-line="412" selection-start-column="29" selection-end-line="412" selection-end-column="29" />
+            <state relative-caret-position="404">
+              <caret line="300" column="30" selection-start-line="300" selection-start-column="30" selection-end-line="300" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/house-start.jpg">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/libcore/cell.rs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="814" column="11" selection-start-line="814" selection-start-column="11" selection-end-line="814" selection-end-column="11" />
               <folding>
-                <element signature="e#3670#3671#0" expanded="true" />
-                <element signature="e#3714#3715#0" expanded="true" />
+                <element signature="e#24469#24470#0" expanded="true" />
+                <element signature="e#24532#24533#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -112,8 +133,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/piston2d-graphics-0.26.0/src/context.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+            <state>
+              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -121,7 +142,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/interpolation-0.1.0/src/spatial.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-634">
+            <state>
               <caret line="130" column="7" selection-start-line="130" selection-start-column="7" selection-end-line="130" selection-end-column="7" />
             </state>
           </provider>
@@ -130,7 +151,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/piston2d-graphics-0.26.0/src/lib.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
+            <state>
               <caret line="102" column="7" selection-start-line="102" selection-start-column="7" selection-end-line="102" selection-end-column="7" />
             </state>
           </provider>
@@ -139,7 +160,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/piston2d-graphics-0.26.0/src/image.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1567">
+            <state>
               <caret line="57" column="11" selection-start-line="57" selection-start-column="11" selection-end-line="57" selection-end-column="11" />
             </state>
           </provider>
@@ -147,20 +168,13 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/piston2d-graphics-0.26.0/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="440">
-                <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/piston2d-graphics-0.26.0/src/math.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
+            <state>
               <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
             </state>
           </provider>
@@ -169,26 +183,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/vecmath-0.3.1/src/lib.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="836">
+            <state>
               <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/libcore/convert.rs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="545">
-              <caret line="402" column="27" selection-start-line="402" selection-start-column="27" selection-end-line="402" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/libcore/cmp.rs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="111" column="10" selection-start-line="111" selection-start-column="10" selection-end-line="111" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -214,7 +210,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="850" />
+    <option name="x" value="133" />
     <option name="y" value="27" />
     <option name="width" value="1504" />
     <option name="height" value="1413" />
@@ -225,7 +221,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -243,81 +238,13 @@
               <item name="throw-apple" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="throw-apple" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="throw-apple" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="core" type="20ee2d1f:SyntheticLibraryElementNode" />
-            </path>
-            <path>
-              <item name="throw-apple" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="core" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="libcore" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="throw-apple" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="interpolation" type="20ee2d1f:SyntheticLibraryElementNode" />
-            </path>
-            <path>
-              <item name="throw-apple" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="interpolation" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="interpolation-0.1.0" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="throw-apple" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="interpolation" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="interpolation-0.1.0" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="throw-apple" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="piston2d-graphics" type="20ee2d1f:SyntheticLibraryElementNode" />
-            </path>
-            <path>
-              <item name="throw-apple" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="piston2d-graphics" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="piston2d-graphics-0.26.0" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="throw-apple" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="piston2d-graphics" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="piston2d-graphics-0.26.0" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="throw-apple" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="vecmath" type="20ee2d1f:SyntheticLibraryElementNode" />
-            </path>
-            <path>
-              <item name="throw-apple" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="vecmath" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="vecmath-0.3.1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="throw-apple" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="vecmath" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="vecmath-0.3.1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -333,7 +260,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -358,7 +285,7 @@
   <component name="RunManager">
     <configuration name="Run piston-demo" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="channel" value="DEFAULT" />
-      <option name="command" value="run --package piston-demo --bin piston-demo" />
+      <option name="command" value="run --package piston-demo --bin piston-demo -A warnings" />
       <option name="nocapture" value="true" />
       <option name="backtrace" value="SHORT" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
@@ -384,28 +311,28 @@
       <workItem from="1533196243824" duration="14082000" />
       <workItem from="1533217627969" duration="4452000" />
       <workItem from="1533269902692" duration="820000" />
-      <workItem from="1533270848241" duration="15270000" />
+      <workItem from="1533270848241" duration="21757000" />
+      <workItem from="1533303273966" duration="359000" />
+      <workItem from="1533303667644" duration="2313000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34624000" />
+    <option name="totallyTimeSpent" value="43783000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="850" y="27" width="1504" height="1413" extended-state="4" />
-    <editor active="true" />
+    <frame x="133" y="27" width="1504" height="1413" extended-state="4" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18998629" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19547325" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection Results" weight="0.3299532" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" x="28" y="31" width="1028" height="1359" id="Run" order="2" type="FLOATING" visible="true" weight="0.32929516" />
+      <window_info anchor="bottom" x="28" y="31" width="1332" height="1359" id="Run" order="2" type="FLOATING" weight="0.32929516" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -414,6 +341,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32929516" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32929516" />
       <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.3299532" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -473,9 +401,6 @@
     <entry file="file://$USER_HOME$/.cargo/registry/src/mirrors.ustc.edu.cn-b63e9dae659fc205/pistoncore-window-0.32.0/src/lib.rs" />
     <entry file="file://$USER_HOME$/.cargo/registry/src/mirrors.ustc.edu.cn-b63e9dae659fc205/itertools-0.5.10/src/groupbylazy.rs" />
     <entry file="file://$USER_HOME$/.cargo/registry/src/mirrors.ustc.edu.cn-b63e9dae659fc205/pistoncore-input-0.21.0/src/button.rs" />
-    <entry file="file://$PROJECT_DIR$/assets/house-start.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$USER_HOME$/.cargo/registry/src/mirrors.ustc.edu.cn-b63e9dae659fc205/pistoncore-input-0.21.0/src/render.rs" />
     <entry file="file://$USER_HOME$/.cargo/registry/src/mirrors.ustc.edu.cn-b63e9dae659fc205/pistoncore-input-0.21.0/src/keyboard.rs" />
     <entry file="file://$USER_HOME$/.cargo/registry/src/mirrors.ustc.edu.cn-b63e9dae659fc205/piston2d-graphics-0.26.0/src/text.rs" />
@@ -513,66 +438,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/vecmath-0.3.1/src/lib.rs">
+    <entry file="file://$USER_HOME$/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/libcore/iter/iterator.rs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+        <state>
+          <caret line="597" column="48" selection-start-line="597" selection-start-column="48" selection-end-line="597" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/interpolation-0.1.0/src/spatial.rs">
+    <entry file="file://$USER_HOME$/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/libcore/cell.rs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-634">
-          <caret line="130" column="7" selection-start-line="130" selection-start-column="7" selection-end-line="130" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/piston2d-graphics-0.26.0/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="440">
-            <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/piston2d-graphics-0.26.0/src/image.rs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1567">
-          <caret line="57" column="11" selection-start-line="57" selection-start-column="11" selection-end-line="57" selection-end-column="11" />
+        <state>
+          <caret line="814" column="11" selection-start-line="814" selection-start-column="11" selection-end-line="814" selection-end-column="11" />
+          <folding>
+            <element signature="e#24469#24470#0" expanded="true" />
+            <element signature="e#24532#24533#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/piston2d-graphics-0.26.0/src/context.rs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        <state>
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/piston2d-graphics-0.26.0/src/math.rs">
+    <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/interpolation-0.1.0/src/spatial.rs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+        <state>
+          <caret line="130" column="7" selection-start-line="130" selection-start-column="7" selection-end-line="130" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/piston2d-graphics-0.26.0/src/lib.rs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
+        <state>
           <caret line="102" column="7" selection-start-line="102" selection-start-column="7" selection-end-line="102" selection-end-column="7" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/piston2d-graphics-0.26.0/src/image.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="57" column="11" selection-start-line="57" selection-start-column="11" selection-end-line="57" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/piston2d-graphics-0.26.0/README.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/piston2d-graphics-0.26.0/src/math.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.cargo/registry/src/github.com-1ecc6299db9ec823/vecmath-0.3.1/src/lib.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/house-start.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.rs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="412" column="29" selection-start-line="412" selection-start-column="29" selection-end-line="412" selection-end-column="29" />
-          <folding>
-            <element signature="e#3670#3671#0" expanded="true" />
-            <element signature="e#3714#3715#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="404">
+          <caret line="300" column="30" selection-start-line="300" selection-start-column="30" selection-end-line="300" selection-end-column="30" />
         </state>
       </provider>
     </entry>
