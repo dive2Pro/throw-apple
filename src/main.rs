@@ -4,38 +4,40 @@ use piston_window::*;
 use piston_window::Input;
 use std::path::Path;
 use std::f64;
-
-
-struct Item {
-    x: usize,
-    y: usize,
-    w: usize,
-    h: usize,
-}
+use std::thread::park_timeout;
+use std::time::{Instant, Duration};
+use std::thread;
+use std::sync:: {Arc, Mutex};
+use std::marker:: {PhantomData};
+struct ItemModel {}
 
 enum AppleStatue {
     LIVE,
     SCORE,
-    DIE
+    DIE,
 }
-struct Apple {
 
+struct Apple<'a> {
+    x: usize,
+    y: usize,
+    w: usize,
+    h: usize,
     status: AppleStatue
 }
 
-impl Item for Apple {
-    fn new(x: usize, y: usize) -> Self {
+impl <'a> Apple<'a> {
+    fn new(x: usize, y: usize) -> Apple<'a> {
         Self {
             x,
             y,
             w: 25,
             h: 25,
-            status: AppleStatue::LIVE
+            status: AppleStatue::LIVE,
         }
     }
     /// 检查是否和 other 相遇
     /// 相遇后, 将状态置为 SCORE
-    fn encourage(&self, other: &Item) -> bool {
+    fn encourage(&self, other: &ItemModel) -> bool {
         unimplemented!()
     }
     /// 更新自己的状态
@@ -47,11 +49,15 @@ impl Item for Apple {
 }
 
 struct Screen {
+    x: usize,
+    y: usize,
+    w: usize,
+    h: usize,
 
 }
 
 
-impl Item for Screen {
+impl Screen {
     fn new(x: usize, y: usize) -> Self {
         Self {
             x,
@@ -73,20 +79,42 @@ impl Item for Screen {
     }
 }
 
-struct People {}
+struct People<'a> {
+    x: usize,
+    y: usize,
+    w: usize,
+    h: usize,
+    speed: usize,
+}
 
-struct Game {
+impl <'a> People<'a> {
+    /// generator a new People which have his own speed
+    fn new(x: usize, y: usize) -> People<'a>{
+        Self {
+            x,
+            y,
+            w: 25,
+            h: 25,
+            speed: 10,
+        }
+    }
+    /// update position
+    fn update(&self) {}
+}
+
+
+struct Game<'b>{
     /// 游戏场景
     scene: GameMode,
     /// 初始生命值
     life: usize,
     lives: usize,
     /// 得分的苹果
-    scores: Vec<Apple>,
+    scores: Vec<Apple<'b>>,
     /// LIVE 的 苹果
-    apples: Vec<Apple>,
+    apples: Vec<Apple<'b>>,
     /// 路上的行人, 得分点
-    peoples: Vec<People>
+    peoples: Arc<Vec<People<'b>>>,
 }
 
 enum GameMode {
@@ -95,7 +123,7 @@ enum GameMode {
     END,
 }
 
-impl Game {
+impl<'a> Game<'a> {
     fn new(lives: usize) -> Self {
         Game {
             scene: GameMode::START,
@@ -103,7 +131,7 @@ impl Game {
             life: lives,
             scores: vec![],
             apples: vec![],
-            peoples: vec![]
+            peoples: Arc::new(vec![]),
         }
     }
 
@@ -111,11 +139,18 @@ impl Game {
         self.scene = GameMode::ING;
         self.produce_people()
     }
-
-    fn produce_people(&self) {
-
+    /// Async
+    /// produce some people in a interval time
+    fn produce_people(&'a self) {
+        thread::spawn( || {
+            let interval = Duration::from_secs(2);
+            loop {
+                park_timeout(interval);
+                let p = People::new(30, 720);
+                &self.peoples.clone().push(p);
+            }
+        });
     }
-
 }
 
 
