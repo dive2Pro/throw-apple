@@ -10,8 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f29a0e38-ba5c-4b46-910d-034b653866aa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -74,22 +72,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="rs" value="3" />
+          <entry key="rs" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Rust" value="3" />
+          <entry key="Rust" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="rs" value="4119" />
+          <entry key="rs" value="11141" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Rust" value="4119" />
+          <entry key="Rust" value="11141" />
         </counts>
       </usages-collector>
     </session>
@@ -99,14 +97,40 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="584">
-              <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
+            <state relative-caret-position="572">
+              <caret line="141" column="24" selection-start-line="141" selection-start-column="24" selection-end-line="141" selection-end-column="24" />
               <folding>
-                <element signature="e#752#753#0" expanded="true" />
-                <element signature="e#783#784#0" expanded="true" />
-                <element signature="e#863#864#0" expanded="true" />
-                <element signature="e#894#895#0" expanded="true" />
+                <element signature="e#3670#3671#0" expanded="true" />
+                <element signature="e#3714#3715#0" expanded="true" />
+                <element signature="e#4133#4879#1" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/libcore/convert.rs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="545">
+              <caret line="402" column="27" selection-start-line="402" selection-start-column="27" selection-end-line="402" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/libcore/cmp.rs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="413">
+              <caret line="111" column="10" selection-start-line="111" selection-start-column="10" selection-end-line="111" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/liballoc/vec.rs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="453">
+              <caret line="302" column="11" selection-start-line="302" selection-start-column="11" selection-end-line="302" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -132,9 +156,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="1355" />
+    <option name="x" value="1056" />
     <option name="y" value="27" />
-    <option name="width" value="1205" />
+    <option name="width" value="1504" />
     <option name="height" value="1413" />
   </component>
   <component name="ProjectView">
@@ -143,7 +167,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -154,20 +178,41 @@
             <path>
               <item name="throw-apple" type="b2602c69:ProjectViewProjectNode" />
               <item name="throw-apple" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="throw-apple" type="b2602c69:ProjectViewProjectNode" />
+              <item name="throw-apple" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="throw-apple" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="throw-apple" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="core" type="20ee2d1f:SyntheticLibraryElementNode" />
+            </path>
+            <path>
+              <item name="throw-apple" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="core" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="libcore" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533216609014" />
+    <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -227,17 +272,48 @@
       <workItem from="1533196243824" duration="14082000" />
       <workItem from="1533217627969" duration="4452000" />
       <workItem from="1533269902692" duration="820000" />
-      <workItem from="1533270848241" duration="5835000" />
+      <workItem from="1533270848241" duration="13167000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25189000" />
+    <option name="totallyTimeSpent" value="32521000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1355" y="27" width="1205" height="1413" extended-state="4" />
+    <frame x="1056" y="27" width="1504" height="1413" extended-state="4" />
     <editor active="true" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18998629" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection Results" weight="0.3299532" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" x="28" y="31" width="1269" height="1359" id="Run" order="2" type="FLOATING" visible="true" weight="0.32929516" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32929516" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32929516" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Cargo" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" id="Maven Projects" order="9" />
+    </layout>
+    <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" weight="0.097056486" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
@@ -266,7 +342,7 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Database" order="8" />
       <window_info anchor="right" id="Maven Projects" order="9" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -311,15 +387,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/libcore/cmp.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="111" column="10" selection-start-line="111" selection-start-column="10" selection-end-line="111" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/libcore/convert.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="402" column="27" selection-start-line="402" selection-start-column="27" selection-end-line="402" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.rs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
+        <state relative-caret-position="572">
+          <caret line="141" column="24" selection-start-line="141" selection-start-column="24" selection-end-line="141" selection-end-column="24" />
           <folding>
-            <element signature="e#752#753#0" expanded="true" />
-            <element signature="e#783#784#0" expanded="true" />
-            <element signature="e#863#864#0" expanded="true" />
-            <element signature="e#894#895#0" expanded="true" />
+            <element signature="e#3670#3671#0" expanded="true" />
+            <element signature="e#3714#3715#0" expanded="true" />
+            <element signature="e#4133#4879#1" />
           </folding>
         </state>
       </provider>
