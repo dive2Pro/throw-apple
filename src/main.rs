@@ -10,10 +10,11 @@ use std::thread;
 use std::sync::{Arc, Mutex};
 use std::marker::PhantomData;
 use std::cmp::PartialEq;
+use std::cell::RefCell;
 
 struct ItemModel {}
 
-#[derive(PartialEq)]
+#[derive(PartialEq, Debug)]
 enum AppleStatue {
     LIVE,
     SCORE,
@@ -26,6 +27,7 @@ enum AppleStatue {
 //    }
 //}
 
+#[derive(Debug)]
 struct Apple {
     x: f64,
     y: f64,
@@ -88,15 +90,12 @@ impl Shooter {
             (115, 120),
             (220, 120),
             (335, 120),
-
             (115, 220),
             (220, 220),
             (335, 220),
-
             (115, 325),
             (220, 325),
             (330, 325),
-
             (110, 450),
             (220, 450),
             (330, 450),
@@ -196,9 +195,9 @@ struct Game {
     life: usize,
     lives: usize,
     /// 得分的苹果
-    scores: Vec<Apple>,
+    scores: Vec<RefCell<Apple>>,
     /// LIVE 的 苹果
-    apples: Vec<Apple>,
+    apples: Vec<RefCell<Apple>>,
     /// 路上的行人, 得分点
     peoples: Arc<Mutex<Vec<People>>>,
     shooter: Shooter,
@@ -274,7 +273,7 @@ fn main() {
         &TextureSettings::new(),
     ).unwrap();
 
-    let app = Texture::from_path(
+    let apple = Texture::from_path(
         &mut window.factory,
         Path::new("assets/apple.png"),
         Flip::None,
@@ -295,9 +294,7 @@ fn main() {
     let mut glyphs = Glyphs::new(font, window.factory.clone(),
                                  TextureSettings::new(),
     ).unwrap();
-    let mut x = 50.0;
-    let y = 0.0;
-    let x_step = 1.0;
+    game.start_game();
     while let Some(e) = window.next() {
         match e {
             Event::Input(Input::Button(key)) => {
@@ -334,7 +331,8 @@ fn main() {
                                             Key::S => { game.shooter.move_down(); }
                                             Key::Space => {
                                                 // throw apple
-                                                game.shooter.throw_apple();
+                                                let apple = game.shooter.throw_apple();
+                                                game.apples.push(RefCell::new(apple));
                                             }
                                             _ => {}
                                         }
@@ -413,8 +411,16 @@ fn main() {
                                 c.transform,
                                 g,
                             );
-                            // draw people
+                            
                             // draw apples
+                            game.apples.iter().for_each(|a| {
+                                let mut a = a.borrow_mut();
+                                image(&apple,
+                                      c.transform.trans(a.x, a.y)
+                                      , g);
+                                a.update();
+                            });
+                            // draw people
                         });
                     }
                     _ => {}
