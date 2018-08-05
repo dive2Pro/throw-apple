@@ -330,6 +330,13 @@ fn main() {
         &TextureSettings::new(),
     ).unwrap();
 
+    let apple_gone = Texture::from_path(
+        &mut window.factory,
+        Path::new("assets/apple-gone.png"),
+        Flip::None,
+        &TextureSettings::new(),
+    ).unwrap();
+
     let house = Texture::from_path(
         &mut window.factory,
         Path::new("assets/house.jpg"),
@@ -452,6 +459,25 @@ fn main() {
                         window.draw_2d(&e, |c, g| {
                             clear(white, g);
                             image(&house, c.transform.scale(0.5, 0.5), g);
+
+                            let lives = game.lives;
+                            let life = game.life;
+
+                            for i in 0..life {
+                                if i < lives {
+                                    image(
+                                        &apple,
+                                        c.transform.trans(20.0 + (25 * i) as f64 , 30.0).scale(0.5, 0.5),
+                                        g
+                                    )
+                                } else {
+                                    image(
+                                        &apple_gone,
+                                        c.transform.trans(20.0 + (25 * i ) as f64 , 30.0).scale(0.5, 0.5),
+                                        g
+                                    )
+                                }
+                            }
 
                             // draw open screen
                             let Shooter { x, y, w, h, .. } = game.shooter;
