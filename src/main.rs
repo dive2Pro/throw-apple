@@ -14,7 +14,7 @@ use std::cell::{RefCell, RefMut};
 
 struct ItemModel {}
 
-#[derive(PartialEq, Debug)]
+#[derive(PartialEq, Debug, Clone)]
 enum AppleStatue {
     LIVE,
     SCORE,
@@ -27,7 +27,7 @@ enum AppleStatue {
 //    }
 //}
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 struct Apple {
     x: f64,
     y: f64,
@@ -72,6 +72,7 @@ impl Apple {
     }
 }
 
+#[derive(Debug)]
 struct Shooter {
     x: f64,
     y: f64,
@@ -161,7 +162,7 @@ impl Shooter {
     }
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 struct People {
     x: f64,
     y: f64,
@@ -192,7 +193,7 @@ impl People {
     }
 }
 
-
+#[derive(Debug)]
 struct Game {
     /// 游戏场景
     scene: GameMode,
@@ -208,6 +209,7 @@ struct Game {
     shooter: Shooter,
 }
 
+#[derive(Debug)]
 enum GameMode {
     START,
     ING,
@@ -259,16 +261,19 @@ impl Game {
                 pps.push(RefCell::new(p));
             }
         });
-
     }
     /// update scores apples peoples
     /// here we got some data which showing on screen
     fn update(&mut self) {
-        let ap: Vec<RefCell<Apple>> = self.apples.iter().filter(|a| {
+        let apples = self.apples.clone();
+        // update apples
+        self.apples = apples.iter().filter(|a| {
             let a = a.borrow_mut();
             match a.status {
                 AppleStatue::SCORE => {
-                    self.scores += 20;
+                    {
+                        self.scores += 20;
+                    }
                     return false;
                 }
                 AppleStatue::LIVE => {
@@ -276,12 +281,29 @@ impl Game {
                 }
                 AppleStatue::DIE => {
                     self.lives -= 1;
+                    if self.lives == 0 {
+                        self.over();
+                    }
                     return false;
                 }
             }
         })
             .cloned()
             .collect();
+
+        // update peoples
+        let peoples = self.peoples.lock().unwrap();
+//        let peoples: Vec<RefCell<People>> = peoples.iter().filter(|p| {
+//            let p = p.borrow_mut();
+//            p.statue == AppleStatue::LIVE
+//        })
+//            .cloned()
+//            .collect();
+        println!("{:?} ", peoples);
+//        self.peoples = Arc::new(Mutex::from(peoples));
+    }
+    fn over(&mut self) {
+        self.scene = GameMode::END
     }
 }
 
@@ -451,12 +473,14 @@ fn main() {
                             // draw people
                             peoples.iter().for_each(|p| {
                                 let mut p = p.borrow_mut();
-                                rectangle(
-                                    [1.0, 0.0, 1.0, 1.0],
-                                    [p.x, p.y, p.w, p.h],
-                                    c.transform,
-                                    g,
-                                );
+                                if p.statue == AppleStatue::LIVE {
+                                    rectangle(
+                                        [1.0, 0.0, 1.0, 1.0],
+                                        [p.x, p.y, p.w, p.h],
+                                        c.transform,
+                                        g,
+                                    );
+                                }
                                 p.update();
                             });
                             game.apples.iter().for_each(|a| {
