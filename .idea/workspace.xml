@@ -10,8 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f29a0e38-ba5c-4b46-910d-034b653866aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/apple-gone.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -91,14 +89,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="rs" value="23401" />
+          <entry key="rs" value="25295" />
           <entry key="txt" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="20" />
-          <entry key="Rust" value="23401" />
+          <entry key="Rust" value="25295" />
         </counts>
       </usages-collector>
     </session>
@@ -108,13 +106,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.rs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="475" column="105" selection-start-line="475" selection-start-column="105" selection-end-line="475" selection-end-column="105" />
+            <state relative-caret-position="1040">
+              <caret line="366" selection-start-line="366" selection-end-line="366" />
               <folding>
                 <element signature="e#3953#3954#0" expanded="true" />
                 <element signature="e#3998#3999#0" expanded="true" />
                 <element signature="e#6436#6437#0" expanded="true" />
                 <element signature="e#6477#6478#0" expanded="true" />
+                <element signature="e#9868#12209#1" />
+                <element signature="e#12837#15595#1" />
+                <element signature="e#12889#15009#1" />
+                <element signature="e#16678#17696#1" />
               </folding>
             </state>
           </provider>
@@ -323,12 +325,12 @@
       <workItem from="1533270848241" duration="21757000" />
       <workItem from="1533303273966" duration="359000" />
       <workItem from="1533303667644" duration="3297000" />
-      <workItem from="1533443649869" duration="5682000" />
+      <workItem from="1533443649869" duration="6310000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50449000" />
+    <option name="totallyTimeSpent" value="51077000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="17" y="27" width="1504" height="1413" extended-state="4" />
@@ -518,13 +520,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.rs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="475" column="105" selection-start-line="475" selection-start-column="105" selection-end-line="475" selection-end-column="105" />
+        <state relative-caret-position="1040">
+          <caret line="366" selection-start-line="366" selection-end-line="366" />
           <folding>
             <element signature="e#3953#3954#0" expanded="true" />
             <element signature="e#3998#3999#0" expanded="true" />
             <element signature="e#6436#6437#0" expanded="true" />
             <element signature="e#6477#6478#0" expanded="true" />
+            <element signature="e#9868#12209#1" />
+            <element signature="e#12837#15595#1" />
+            <element signature="e#12889#15009#1" />
+            <element signature="e#16678#17696#1" />
           </folding>
         </state>
       </provider>

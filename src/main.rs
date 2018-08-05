@@ -314,7 +314,6 @@ fn main() {
         "Hello Piston", [500, 724],
     ).opengl(opengl).exit_on_esc(true).build().unwrap();
 
-    let mut game = Game::new(10);
 
     let house_start = Texture::from_path(
         &mut window.factory,
@@ -351,20 +350,21 @@ fn main() {
     let mut glyphs = Glyphs::new(font, window.factory.clone(),
                                  TextureSettings::new(),
     ).unwrap();
-    game.start_game();
+    let mut game = Game::new(10);
     while let Some(e) = window.next() {
         match e {
             Event::Input(Input::Button(key)) => {
                 let ButtonArgs { state, button, .. } = key;
                 println!("{:?}, {:?}", state, button);
                 match game.scene {
-                    GameMode::START => {
+                    GameMode::START | GameMode::END => {
                         match state {
                             ButtonState::Press => {
                                 match button {
                                     Button::Keyboard(key) => {
                                         match key {
                                             Key::P => {
+                                                game = Game::new(10);
                                                 game.start_game();
                                             }
                                             _ => {}
@@ -399,6 +399,10 @@ fn main() {
                             }
                             _ => {}
                         }
+                    }
+                    GameMode::END => {
+                      game = Game::new(20) ;
+                      game.start_game();
                     }
                     _ => {}
                 }
@@ -532,6 +536,36 @@ fn main() {
                         });
 
                         game.update();
+                    }
+                    GameMode::END => {
+                        window.draw_2d(&e, |c,g| {
+                            clear(white, g);
+                            image(&house_start, c.transform.scale(0.5, 0.5), g);
+                            Text::new_color(black, 50)
+                                .draw(
+                                    &"APPLE-RANDOM",
+                                    &mut glyphs,
+                                    &c.draw_state,
+                                    c.transform.trans(135.0, 100.0),
+                                    g,
+                                ).unwrap();
+                            Text::new_color(black, 80)
+                                .draw(
+                                    &format!("Score: {}", game.scores),
+                                    &mut glyphs,
+                                    &c.draw_state,
+                                    c.transform.trans(135.0, 300.0),
+                                    g,
+                                ).unwrap();
+                            Text::new_color(black, 45)
+                                .draw(
+                                    &"use <P> to replay the game!",
+                                    &mut glyphs,
+                                    &c.draw_state,
+                                    c.transform.trans(90.0, 550.0),
+                                    g,
+                                ).unwrap();
+                        });
                     }
                     _ => {}
                 }
